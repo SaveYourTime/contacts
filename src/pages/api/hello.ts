@@ -3,7 +3,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 type Data = {
-  name: string
+  name: string;
 };
 
 export default (req: NextApiRequest, res: NextApiResponse<Data>) => {
