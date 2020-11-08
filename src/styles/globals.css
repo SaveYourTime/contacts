@@ -11,6 +11,18 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  outline: none;
+  background-color: unset;
+}
+
 * {
   box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
 }
