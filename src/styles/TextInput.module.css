@@ -5,9 +5,10 @@
 }
 
 .title {
-  margin-right: 12px;
+  margin-right: 8px;
   flex: 0 0 10%;
   max-width: 10%;
+  min-width: fit-content;
 }
 
 .input {
