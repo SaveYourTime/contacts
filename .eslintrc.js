@@ -25,12 +25,13 @@ module.exports = {
     sourceType: 'module',
     project: 'tsconfig.json',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/control-has-associated-label': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
   },
   ignorePatterns: ['.eslintrc.js'],
 };
