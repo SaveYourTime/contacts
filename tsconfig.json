@@ -25,7 +25,8 @@
       "@/interfaces/*": ["interfaces/*"],
       "@/pages/*": ["pages/*"],
       "@/store/*": ["store/*"],
-      "@/styles/*": ["styles/*"]
+      "@/styles/*": ["styles/*"],
+      "@/utils/*": ["utils/*"]
     }
   },
   "include": [
