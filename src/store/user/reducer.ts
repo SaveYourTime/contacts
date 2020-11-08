@@ -25,7 +25,7 @@ const reducer = (state = initialState, action: AnyAction): UserState => {
     case FETCH_USERS_FAILURE:
       return { ...state, error: payload, pending: false };
     case ADD_USER: {
-      const id = Math.max(...state.data.map((user) => user.id)) + 1;
+      const id = state.data.length ? Math.max(...(state.data.map((user) => user.id) ?? 0)) + 1 : 1;
       return { ...state, data: [...state.data, { id, ...payload }] };
     }
     case DELETE_USER:
