@@ -1,30 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# user-contacts
+
+![Imgur](https://i.imgur.com/gn9i8Ig.png)
+![Imgur](https://i.imgur.com/z55I8Cs.png)
+![Imgur](https://i.imgur.com/cuq3AIp.png)
+![Imgur](https://i.imgur.com/8AUEsCv.png)
 
 ## Getting Started
 
-First, run the development server:
+### Installation
 
 ```bash
-npm run dev
-# or
+yarn
+```
+
+### Run the server
+
+```bash
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Demo
 
-## Learn More
+Here is a working live demo : https://kkstream-contacts.vercel.app
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- React
+- Redux
+- Next.js
+- TypeScript
+- Responsive Web Design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Testing
 
-## Deploy on Vercel
+- Cypress (End to End Testing)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Tools
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- ESLint
+- Prettier
+
+## Features
+
+#### The Production Ready React Framework - Next.js
+
+Using `Next.js` to embrace lots of features with little or no configuration required, like server-side rendering capabilities, file-system based routing, code splitting, and other features we need for production.
+
+#### Strongly Typed JavaScript
+
+Using `TypeScript` to save time for catching errors and providing fixes before you run code.
+
+#### Ensuring Code Quality and Keep Style Consistent
+
+Using `ESLint` and `Prettier` as the code linter and formatter to enforces a consistent style, find and fix problems.
+
+#### End to End Testing with Cypress
+
+Using `Cypress` to test both logic and view, such as adding a new contact, deleting existing contact, validating user input, and so on.
+
+## Description
+
+1. Home page is a table to `show` all the user contacts
+2. You can `add` a new contact to the list by tapping the `Add User` button and type in valid `name` and `email` to the popup modal
+3. You can `delete` any contact in the list by tapping the button with the trash can icon
+4. You can also `filter` the list by name
+5. You can also `sort` the list by selecting the dropdown menu with one of the following option
+   - ID (ASC)
+   - ID (DESC)
+   - Name (A-Z)
