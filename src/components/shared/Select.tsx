@@ -6,6 +6,7 @@ type Props = {
   title: string;
   titleStyle?: CSSProperties;
   fill?: boolean;
+  testID?: string;
 };
 
 export default function Select({
@@ -13,6 +14,7 @@ export default function Select({
   title,
   titleStyle,
   onChange,
+  testID,
   fill,
 }: Props & HTMLProps<HTMLSelectElement>) {
   return (
@@ -20,7 +22,11 @@ export default function Select({
       <span className={styles.title} style={titleStyle}>
         {title}
       </span>
-      <select onChange={onChange} className={`${styles.input} ${fill ? styles.fill : ''}`}>
+      <select
+        onChange={onChange}
+        className={`${styles.input} ${fill ? styles.fill : ''}`}
+        data-testid={testID}
+      >
         {children}
       </select>
     </div>

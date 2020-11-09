@@ -9,7 +9,7 @@ export default function ErrorMessage({ error }: Props) {
     return (
       <>
         {error.map((message, index) => (
-          <p key={index.toString()} className={styles.error}>
+          <p key={index.toString()} className={styles.error} data-testid="error-message">
             {message}
           </p>
         ))}
@@ -17,5 +17,9 @@ export default function ErrorMessage({ error }: Props) {
     );
   }
   if (!error) return null;
-  return <p className={styles.error}>{error}</p>;
+  return (
+    <p className={styles.error} data-testid="error-message">
+      {error}
+    </p>
+  );
 }

@@ -8,7 +8,7 @@ type Props = {
 
 export default function TableRow({ user, onClick }: Props) {
   return (
-    <tr>
+    <tr data-testid="table-row">
       <th scope="row">{user.id}</th>
       <td>
         <div>{user.name}</div>
@@ -16,7 +16,7 @@ export default function TableRow({ user, onClick }: Props) {
       </td>
       <td>{user.email}</td>
       <td>
-        <button type="button" onClick={onClick}>
+        <button type="button" onClick={onClick} data-testid="delete-user-button">
           <img
             src="https://www.flaticon.com/svg/static/icons/svg/1214/1214428.svg"
             alt="delete button"

@@ -83,35 +83,47 @@ export default function Home() {
             title="Filter by"
             titleStyle={{ fontWeight: 600 }}
             onChangeText={handleFilterUser}
+            testID="filter-input"
             fill
           />
           <Select
             title="Sort by"
             titleStyle={{ fontWeight: 600 }}
             onChange={(e) => handleSortUser(e.currentTarget.value as SortType)}
+            testID="sort-select"
             fill
           >
             <option value={SortType.ID_ASC}>ID &#40;ASC&#41;</option>
             <option value={SortType.ID_DESC}>ID &#40;DESC&#41;</option>
             <option value={SortType.NAME}>Name &#40;A-Z&#41;</option>
           </Select>
-          <Button title="Add User" onClick={toggleModal} secondary />
+          <Button title="Add User" onClick={toggleModal} secondary testID="add-button" />
         </section>
 
         <Table data={users} handleDeleteUser={handleDeleteUser} />
       </main>
 
-      <Modal title="Add new user" open={open} setOpen={setOpen} okText="Add" onOk={handleAddUser}>
+      <Modal
+        title="Add new user"
+        open={open}
+        setOpen={setOpen}
+        okText="Add"
+        onOk={handleAddUser}
+        testID="add-user-modal"
+        okTestID="add-user-modal-ok-button"
+      >
         <TextInput
           title="Name"
           value={user.name}
           onChangeText={(name) => setUser({ ...user, name })}
+          testID="name-input"
           fill
         />
         <TextInput
           title="Email"
           value={user.email}
           onChangeText={(email) => setUser({ ...user, email })}
+          testID="email-input"
           fill
         />
         <ErrorMessage error={error} />

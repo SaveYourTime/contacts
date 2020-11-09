@@ -8,9 +8,12 @@ type Props = {
   children?: ReactNode;
   title?: string;
   cancelText?: string;
+  cancelTestID?: string;
   okText?: string;
+  okTestID?: string;
   onCancel?: (e: MouseEvent<HTMLButtonElement>) => void;
   onOk?: (e: MouseEvent<HTMLButtonElement>) => void;
+  testID?: string;
 };
 
 const renderHeader = (title?: string) => {
@@ -28,9 +31,12 @@ export default function Modal({
   children,
   title,
   cancelText = 'Cancel',
+  cancelTestID,
   okText = 'Ok',
+  okTestID,
   onCancel,
   onOk,
+  testID,
 }: Props) {
   const close = () => setOpen(false);
   const handleCancelClick = (e: MouseEvent<HTMLButtonElement>) => {
@@ -40,7 +46,7 @@ export default function Modal({
 
   if (!open) return null;
   return (
-    <div>
+    <div data-testid={testID}>
       <div className={styles.mask} />
       <div className={styles.wrap} onClick={close}>
         <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
@@ -49,8 +55,8 @@ export default function Modal({
             {renderHeader(title)}
             <div className={styles.body}>{children}</div>
             <div className={styles.footer}>
-              <Button title={cancelText} onClick={handleCancelClick} />
-              <Button title={okText} onClick={onOk} primary />
+              <Button title={cancelText} onClick={handleCancelClick} testID={cancelTestID} />
+              <Button title={okText} onClick={onOk} testID={okTestID} primary />
             </div>
           </div>
         </div>
