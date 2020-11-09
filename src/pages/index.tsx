@@ -53,7 +53,7 @@ export default function Home() {
     if (!text) {
       setUsers(data);
     } else {
-      const filterUsers = users.filter(({ name }) => name.includes(text));
+      const filterUsers = data.filter(({ name }) => name.includes(text));
       setUsers(filterUsers);
     }
   };
